@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_19_200230) do
     t.string "type"
     t.string "device"
     t.string "location"
+    t.integer "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
