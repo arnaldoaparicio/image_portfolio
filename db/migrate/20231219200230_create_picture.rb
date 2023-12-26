@@ -6,6 +6,7 @@ class CreatePicture < ActiveRecord::Migration[7.0]
       t.string :type
       t.string :device
       t.string :location
+      t.integer :year
 
       t.timestamps
     end
