@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/about',  to: 'about#index'
-  get '/portfolio', to: 'portfolio#index'
-  get '/porfolio/new', to: 'pictures#new'
+  get '/pictures', to: 'pictures#index'
+  get '/pictures/new', to: 'pictures#new'
 end
