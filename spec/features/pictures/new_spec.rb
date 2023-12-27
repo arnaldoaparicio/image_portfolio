@@ -4,6 +4,8 @@ RSpec.describe 'Pictures New Page', type: :feature do
   it 'can see and fill out the form' do
     visit('/pictures/new')
 
+    expect(page).to have_content('Add New Picture')
+
     fill_in 'Title', with: 'Pic at Cancun'
     fill_in 'Description', with: 'A pretty cool pic'
     fill_in 'Type', with: 'landscape'
