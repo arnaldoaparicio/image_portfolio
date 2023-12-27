@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   get '/about',  to: 'about#index'
   get '/portfolio', to: 'portfolio#index'
+  get '/porfolio/new', to: 'pictures#new'
 end
