@@ -6,7 +6,8 @@ class PicturesController < ApplicationController
   end
 
   def create
-    binding.pry
+    Pictures.create(pictures_params)
+    redirect_to '/pictures'
   end
 
   private
