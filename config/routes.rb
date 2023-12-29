@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get '/about',  to: 'about#index'
   get '/pictures', to: 'pictures#index'
   get '/pictures/new', to: 'pictures#new'
+  
+  post '/pictures', to: 'pictures#create'
 end
