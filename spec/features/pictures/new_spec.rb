@@ -8,7 +8,7 @@ RSpec.describe 'Pictures New Page', type: :feature do
 
     fill_in 'title', with: 'Pic at Cancun'
     fill_in 'description', with: 'A pretty cool pic'
-    fill_in 'type', with: 'landscape'
+    fill_in 'type_of_picture', with: 'landscape'
     fill_in 'device', with: 'iPhone 7'
     fill_in 'location', with: 'Cancun, Mexico'
     fill_in 'year', with: 2012
