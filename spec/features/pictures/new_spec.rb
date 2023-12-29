@@ -13,7 +13,7 @@ RSpec.describe 'Pictures New Page', type: :feature do
     fill_in 'Location', with: 'Cancun, Mexico'
     fill_in 'Year', with: 2012
 
-    click_on 'Submit'
+    click_on 'Submit Picture'
 
     expect(current_path).to eq('/pictures')
     expect(page).to have_content('Pic at Cancun')
