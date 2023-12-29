@@ -1,3 +1,12 @@
 This is my portfolio.
 
+<% @pictures.each do |picture| %>
+    <%= picture.title %>
+    <%= picture.description %>
+    <%= picture.type_of_picture %>
+    <%= picture.device %>
+    <%= picture.location %>
+    <%= picture.year %>
+<% end %>
+
 <%= link_to 'Submit New Picture', '/pictures/new' %>
