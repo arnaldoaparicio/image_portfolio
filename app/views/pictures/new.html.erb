@@ -1,48 +1,47 @@
 <center>
-<br>
+  <br>
   <h1 class="title is-1">Add New Picture</h1>
-<br>
-<%= form_with url: '/pictures', method: :post, data: {turbo: false} do |form| %>
-<div class="container is-fluid">
-  <div class="field">
-    <div class="control">
-      <input class="input is-primary" type="text" name="title" id="title" placeholder="Title">
+  <br>
+  <%= form_with url: '/pictures', method: :post, data: {turbo: false} do |form| %>
+    <div class="container is-fluid">
+      <div class="field">
+        <div class="control">
+          <input class="input is-primary" type="text" name="title" id="title" placeholder="Title">
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <input class="input is-normal" type="text" name="type_of_picture" id="type_of_picture" placeholder="Type of Picture">
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <input class="input is-normal" type="text" name="device" id="device" placeholder="Device">
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <input class="input is-normal" type="text" name="location" id="location" placeholder="Location">
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <input class="input is-normal" type="text" name="year" id="year" placeholder="Year">
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <textarea class="textarea" placeholder="Description..." id="description" name="description"></textarea>
+        </div>
+      </div>
+
+      <input type="submit" name="commit" value="Submit Picture" data-disable-with="Submit Picture" class="button" />
     </div>
-  </div>
 
-
-  <div class="field">
-    <div class="control">
-      <input class="input is-normal" type="text" name="type_of_picture" id="type_of_picture" placeholder="Type of Picture">
-    </div>
-  </div>
-
-  <div class="field">
-    <div class="control">
-      <input class="input is-normal" type="text" name="device" id="device" placeholder="Device">
-    </div>
-  </div>
-
-  <div class="field">
-    <div class="control">
-      <input class="input is-normal" type="text" name="location" id="location" placeholder="Location">
-    </div>
-  </div>
-
-  <div class="field">
-    <div class="control">
-      <input class="input is-normal" type="text" name="year" id="year" placeholder="Year">
-    </div>
-  </div>
-
-  <div class="field">
-    <div class="control">
-      <textarea class="textarea" placeholder="Description..." id="description" name="description"></textarea>
-    </div>
-  </div>
-
-  <input type="submit" name="commit" value="Submit Picture" data-disable-with="Submit Picture" class="button" />
-  </div class="container">
-
-<% end %>
+  <% end %>
 </center>
