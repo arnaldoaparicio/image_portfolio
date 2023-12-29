@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_19_200230) do
   create_table "pictures", force: :cascade do |t|
     t.string "title"
     t.string "description"
-    t.string "type"
+    t.string "type_of_picture"
     t.string "device"
     t.string "location"
     t.integer "year"
