@@ -1,23 +1,23 @@
 Add New Picture
 
 <%= form_with url: '/pictures', method: :post, data: {turbo: false} do |form| %>
-  <%= form.label :Title %>
-  <%= form.text_field :Title %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
 
-  <%= form.label :Description %>
-  <%= form.text_field :Description %>
+  <%= form.label :description %>
+  <%= form.text_field :description %>
 
-  <%= form.label :Type %>
-  <%= form.text_field :Type %>
+  <%= form.label :type %>
+  <%= form.text_field :type_of_picture %>
 
-  <%= form.label :Device %>
-  <%= form.text_field :Device %>
+  <%= form.label :device %>
+  <%= form.text_field :device %>
 
-  <%= form.label :Location %>
-  <%= form.text_field :Location %>
+  <%= form.label :location %>
+  <%= form.text_field :location %>
 
-  <%= form.label :Year %>
-  <%= form.text_field :Year %>
+  <%= form.label :year %>
+  <%= form.text_field :year %>
   
   <%= form.submit 'Submit Picture' %>
 <% end %>
