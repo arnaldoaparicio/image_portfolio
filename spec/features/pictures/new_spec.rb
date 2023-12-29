@@ -6,12 +6,12 @@ RSpec.describe 'Pictures New Page', type: :feature do
 
     expect(page).to have_content('Add New Picture')
 
-    fill_in 'Title', with: 'Pic at Cancun'
-    fill_in 'Description', with: 'A pretty cool pic'
-    fill_in 'Type', with: 'landscape'
-    fill_in 'Device', with: 'iPhone 7'
-    fill_in 'Location', with: 'Cancun, Mexico'
-    fill_in 'Year', with: 2012
+    fill_in 'title', with: 'Pic at Cancun'
+    fill_in 'description', with: 'A pretty cool pic'
+    fill_in 'type', with: 'landscape'
+    fill_in 'device', with: 'iPhone 7'
+    fill_in 'location', with: 'Cancun, Mexico'
+    fill_in 'year', with: 2012
 
     click_on 'Submit Picture'
 
