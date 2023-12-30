@@ -2,7 +2,6 @@
   <br>
   <div class="box" style="width: 50%">
   <h1 class="title is-3">Add New Picture</h1>
-  <br>
   <%= form_with url: '/pictures', method: :post, multipart: true, data: {turbo: false} do |form| %>
     <div class="container is-fluid" >
       <div class="field">
