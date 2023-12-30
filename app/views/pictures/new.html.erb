@@ -3,7 +3,7 @@
   <div class="box" style="width: 50%">
   <h1 class="title is-3">Add New Picture</h1>
   <br>
-  <%= form_with url: '/pictures', method: :post, data: {turbo: false} do |form| %>
+  <%= form_with url: '/pictures', method: :post, multipart: true, data: {turbo: false} do |form| %>
     <div class="container is-fluid" >
       <div class="field">
         <div class="control">
@@ -41,7 +41,32 @@
         </div>
       </div>
 
-      <%= form.file_field :personal_pic %>
+      <div id="file-js-example" class="file has-name is-fullwidth">
+        <label class="file-label">
+          <input class="file-input" type="file" name="personal_pic" id="personal_pic">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Choose a file…
+            </span>
+          </span>
+          <span class="file-name">
+            No file uploaded
+          </span>
+        </label>
+      </div>
+
+      <script>
+        const fileInput = document.querySelector('#file-js-example input[type=file]');
+        fileInput.onchange = () => {
+          if (fileInput.files.length > 0) {
+            const fileName = document.querySelector('#file-js-example .file-name');
+            fileName.textContent = fileInput.files[0].name;
+          }
+        }
+      </script>
 
       <input type="submit" name="commit" value="Submit Picture" data-disable-with="Submit Picture" class="button" />
     </div>
