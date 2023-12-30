@@ -5,4 +5,6 @@ class Pictures < ApplicationRecord
   validates_presence_of :device
   validates_presence_of :location
   validates_presence_of :year
+
+  has_one_attached :personal_pic
 end
