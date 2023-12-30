@@ -7,6 +7,7 @@ This is my portfolio.
     <%= picture.location %>
     <%= picture.year %>
     <%= picture.description %>
+    <%= image_tag url_for(picture.personal_pic.url)%>
 <% end %>
 
 <%= link_to 'Submit New Picture', '/pictures/new' %>
