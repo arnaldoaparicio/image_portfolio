@@ -13,6 +13,6 @@ class PicturesController < ApplicationController
 
   private
   def pictures_params
-    params.permit(:title, :description, :type_of_picture, :device, :location, :year)
+    params.permit(:title, :description, :type_of_picture, :device, :location, :year, :personal_pic)
   end
 end
