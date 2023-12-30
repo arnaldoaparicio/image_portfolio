@@ -12,6 +12,7 @@ RSpec.describe 'Pictures New Page', type: :feature do
     fill_in 'device', with: 'iPhone 7'
     fill_in 'location', with: 'Cancun, Mexico'
     fill_in 'year', with: 2012
+    attach_file('personal_pic', 'spec/test_image/image1.jpg')
 
     click_on 'Submit Picture'
 
