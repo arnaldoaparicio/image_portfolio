@@ -1,76 +1,76 @@
 <center>
   <br>
   <div class="box" style="width: 50%">
-  <h1 class="title is-3">Add New Picture</h1>
-  <%= form_with url: '/pictures', method: :post, multipart: true, data: {turbo: false} do |form| %>
-    <div class="container is-fluid" >
-      <div class="field">
-        <div class="control">
-          <input class="input is-primary" type="text" name="title" id="title" placeholder="Title">
+    <h1 class="title is-3">Add New Picture</h1>
+    <%= form_with url: '/pictures', method: :post, multipart: true, data: {turbo: false} do |form| %>
+      <div class="container is-fluid" >
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" name="title" id="title" placeholder="Title">
+          </div>
         </div>
-      </div>
 
-      <div class="field">
-        <div class="control">
-          <input class="input is-normal" type="text" name="type_of_picture" id="type_of_picture" placeholder="Type of Picture">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" name="type_of_picture" id="type_of_picture" placeholder="Type of Picture">
+          </div>
         </div>
-      </div>
 
-      <div class="field">
-        <div class="control">
-          <input class="input is-normal" type="text" name="device" id="device" placeholder="Device">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" name="device" id="device" placeholder="Device">
+          </div>
         </div>
-      </div>
 
-      <div class="field">
-        <div class="control">
-          <input class="input is-normal" type="text" name="location" id="location" placeholder="Location">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" name="location" id="location" placeholder="Location">
+          </div>
         </div>
-      </div>
 
-      <div class="field">
-        <div class="control">
-          <input class="input is-normal" type="text" name="year" id="year" placeholder="Year">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" name="year" id="year" placeholder="Year">
+          </div>
         </div>
-      </div>
 
-      <div class="field">
-        <div class="control">
-          <textarea class="textarea" placeholder="Description..." id="description" name="description"></textarea>
+        <div class="field">
+          <div class="control">
+            <textarea class="textarea" placeholder="Type a description..." id="description" name="description"></textarea>
+          </div>
         </div>
-      </div>
-      
-      <div class="field">
-        <div id="file-js-example" class="file has-name is-fullwidth">
-          <label class="file-label">
-            <input class="file-input" type="file" name="personal_pic" id="personal_pic">
-            <span class="file-cta">
-              <span class="file-icon">
-                <i class="fas fa-upload"></i>
+        
+        <div class="field">
+          <div id="file-js-example" class="file has-name is-fullwidth">
+            <label class="file-label">
+              <input class="file-input" type="file" name="personal_pic" id="personal_pic">
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                  Choose a file…
+                </span>
               </span>
-              <span class="file-label">
-                Choose a file…
+              <span class="file-name">
+                No file uploaded
               </span>
-            </span>
-            <span class="file-name">
-              No file uploaded
-            </span>
-          </label>
-        </div>
+            </label>
+          </div>
 
-        <script>
-          const fileInput = document.querySelector('#file-js-example input[type=file]');
-          fileInput.onchange = () => {
-            if (fileInput.files.length > 0) {
-              const fileName = document.querySelector('#file-js-example .file-name');
-              fileName.textContent = fileInput.files[0].name;
+          <script>
+            const fileInput = document.querySelector('#file-js-example input[type=file]');
+            fileInput.onchange = () => {
+              if (fileInput.files.length > 0) {
+                const fileName = document.querySelector('#file-js-example .file-name');
+                fileName.textContent = fileInput.files[0].name;
+              }
             }
-          }
-        </script>
-      </div>
+          </script>
+        </div>
 
-      <input type="submit" name="commit" value="Submit Picture" data-disable-with="Submit Picture" class="button" />
-    </div>
-</div>
-  <% end %>
+        <input type="submit" name="commit" value="Submit Picture" data-disable-with="Submit Picture" class="button" />
+      </div>
+    <% end %>
+  </div>
 </center>
