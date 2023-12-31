@@ -1,20 +1,19 @@
-This is my portfolio.
-
-<% @pictures.each do |picture| %>
-  <div class="box" style="width: 50%">
-    <div class="columns">
-        <div class="column">
+<center>
+  <% @pictures.each do |picture| %>
+    <div class="box" style="width: 50%">
+      <center><h2 class="title is-2"><%= picture.title %></h2></center>
+        <div class="columns">
+          <div class="column">
             <%= image_tag url_for(picture.personal_pic.url)%>
+          </div>
+          <div class="column">
+            <p align="left">Shot on: <%= picture.device %></p>
+            <p align="left">Location: <%= picture.location %></p>
+            <p align="left">Date: <%= picture.year %></p>
+            <p align="left">Description: <%= picture.description %></p>
+          </div>
         </div>
-        <div class="column">
-    <p><%= picture.title %></p>
-    <%= picture.device %>
-    <%= picture.location %>
-    <%= picture.year %>
-    <%= picture.description %>
     </div>
-    </div>
-    </div>
-
-<% end %>
-<%= link_to 'Submit New Picture', '/pictures/new' %>
+  <% end %>
+  <%= link_to 'Submit New Picture', '/pictures/new' %>
+</center>
