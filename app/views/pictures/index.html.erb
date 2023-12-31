@@ -1,13 +1,21 @@
 This is my portfolio.
 
 <% @pictures.each do |picture| %>
+  <div class="box" style="width: 50%">
+    <div class="columns">
+        <div class="column">
+            <%= image_tag url_for(picture.personal_pic.url)%>
+        </div>
+        <div class="column">
     <%= picture.title %>
     <%= picture.type_of_picture %>
     <%= picture.device %>
     <%= picture.location %>
     <%= picture.year %>
     <%= picture.description %>
-    <%= image_tag url_for(picture.personal_pic.url)%>
-<% end %>
+    </div>
+    </div>
+    </div>
 
+<% end %>
 <%= link_to 'Submit New Picture', '/pictures/new' %>
