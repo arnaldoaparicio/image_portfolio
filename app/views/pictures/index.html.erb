@@ -1,7 +1,7 @@
 <center>
   <% @pictures.each do |picture| %>
     <div class="box" style="width: 50%">
-      <center><h2 class="title is-2"><%= picture.title %></h2></center>
+      <div class="field"><center><h2 class="title is-2"><%= picture.title %></h2></center></div>
         <div class="columns">
           <div class="column">
             <%= image_tag url_for(picture.personal_pic.url)%>
