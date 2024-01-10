@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Pictures New Page', type: :feature do
+RSpec.describe 'Picture New Page', type: :feature do
   it 'can see and fill out the form' do
     visit('/pictures/new')
 
