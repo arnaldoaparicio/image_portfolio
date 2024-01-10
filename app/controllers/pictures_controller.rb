@@ -1,4 +1,5 @@
 class PicturesController < ApplicationController
+  include ActiveStorage::SetCurrent
   def index
     @pictures = Pictures.all
   end
