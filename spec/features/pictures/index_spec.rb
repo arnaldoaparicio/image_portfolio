@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Pictures Index Page', type: :feature do
+RSpec.describe 'Picture Index Page', type: :feature do
   it 'shows link to submit new picture' do
     visit('/pictures')
 

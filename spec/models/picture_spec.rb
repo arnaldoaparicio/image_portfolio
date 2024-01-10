@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Pictures, type: :model do
+RSpec.describe Picture, type: :model do
   describe 'validations' do
     it { should validate_presence_of(:title) }
     it { should validate_presence_of(:description) }
@@ -21,7 +21,7 @@ RSpec.describe Pictures, type: :model do
                        location: 'Cancun, Mexico',
                        year: 2012,
                        personal_pic: image }
-    picture = Pictures.create!(picture_params)
+    picture = Picture.create!(picture_params)
 
     expect(picture.personal_pic.valid?).to eq(true)
   end
