@@ -1,0 +1,34 @@
+<style>
+    div.picture-gap {
+        object-fit: contain;
+        width:66%;
+        height: 66%;
+    }
+
+</style>
+<br>
+<center>
+    <div class="container is-max-desktop">
+      <h1>Landscapes</h1>
+        <div class="columns picture-gap">
+          <div class="column">
+            <%= image_tag url_for(@landscape_pictures[2].personal_pic.url)%>
+          </div>
+          <div class="column">
+            <%= image_tag url_for(@landscape_pictures[0].personal_pic.url), width: "88%"%>
+            <p><%= image_tag url_for(@landscape_pictures[1].personal_pic.url), width: "88%"%></p>
+          </div>
+        </div>
+
+      <h1>Animals</h1>
+        <div class="columns picture-gap">
+          <div class="column">
+            <%= image_tag url_for(@animal_pictures[0].personal_pic.url),width: "89%"%>
+          </div>
+          <div class="column">
+            <%= image_tag url_for(@animal_pictures[2].personal_pic.url), width: "88%"%>
+            <p><%= image_tag url_for(@animal_pictures[1].personal_pic.url), width: "88%"%></p>
+          </div>
+        </div>
+    </div>
+</center>
