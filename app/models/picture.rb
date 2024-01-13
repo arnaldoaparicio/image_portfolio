@@ -7,4 +7,8 @@ class Picture < ApplicationRecord
   validates_presence_of :year
 
   has_one_attached :personal_pic
+
+  def self.all_landscapes
+    where("type_of_picture = 'landscape'")
+  end
 end
