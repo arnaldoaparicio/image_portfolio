@@ -5,10 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root 'welcome#index'
-
   get '/about',  to: 'about#index'
-  get '/pictures', to: 'pictures#index'
-  get '/pictures/new', to: 'pictures#new'
-  
-  post '/pictures', to: 'pictures#create'
+
+  resources :pictures, only: [:index, :new, :create]
+  get '/pictures/landscape_pictures', to: 'landscape_pictures#index'
 end
