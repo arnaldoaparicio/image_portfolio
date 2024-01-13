@@ -11,4 +11,8 @@ class Picture < ApplicationRecord
   def self.all_landscapes
     where("type_of_picture = 'landscape'")
   end
+
+  def self.all_animals
+    where("type_of_picture = 'animal'")
+  end
 end
