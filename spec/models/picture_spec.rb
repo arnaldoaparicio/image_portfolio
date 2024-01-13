@@ -26,7 +26,7 @@ RSpec.describe Picture, type: :model do
     expect(picture.personal_pic.valid?).to eq(true)
   end
 
-  it "selects all pictures in the 'animal' category" do
+  it "selects all pictures in the 'landscape' category" do
     image1 = Picture.create!(title: 'Sunset in Mexico',
                     description: "This is a picture of the sunset near my grandfather's house.",
                     type_of_picture: 'landscape',
@@ -55,7 +55,7 @@ RSpec.describe Picture, type: :model do
                     location: 'Maurice River, NJ',
                     year: 2019)
 
-    landspaces = Picture.all_landscapes
+    landscapes = Picture.all_landscapes
 
     expect(landscapes.count).to eq(3)
     landscapes.each do |landscape|
