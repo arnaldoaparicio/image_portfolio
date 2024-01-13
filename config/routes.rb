@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get '/about',  to: 'about#index'
 
   resources :pictures, only: [:index, :new, :create]
-
+  get '/pictures/landscape_pictures', to: 'landscape_pictures#index'
 end
