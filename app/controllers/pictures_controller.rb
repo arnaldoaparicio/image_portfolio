@@ -1,7 +1,8 @@
 class PicturesController < ApplicationController
   include ActiveStorage::SetCurrent
   def index
-    @pictures = Picture.all
+    @animal_pictures = Picture.all_animals
+    @landscape_pictures = Picture.all_landscapes
   end
 
   def new
