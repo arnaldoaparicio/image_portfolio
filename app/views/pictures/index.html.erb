@@ -49,6 +49,35 @@
 <br>
 <center>
   <div class="container is-max-desktop">
+    <h1>Animals</h1>
+    <div class="columns picture-gap">
+      <div class="column">
+        <div class="cont">
+          <img width="88%" src=<%= url_for(@animal_pictures[2].personal_pic.url) %>>
+          <div class="middle">
+            <div class="text"><%= @animal_pictures[2].title %></div>
+          </div>
+        </div>
+        <div class="cont">
+          <p><img width="88%" src=<%= url_for(@animal_pictures[1].personal_pic.url) %>></p>
+          <div class="middle">
+            <div class="text"><%= @animal_pictures[1].title %></div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="cont">
+          <img width="89%" src=<%= url_for(@animal_pictures[0].personal_pic.url) %>>
+          <div class="middle">
+            <div class="text"><%= @animal_pictures[0].title %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    See More...
+<br>
+<br>
+<br>
   <h1>Landscapes</h1>
     <div class="columns picture-gap">
       <div class="column">
@@ -74,17 +103,9 @@
         </div>
       </div>
     </div>
-
-    <h1>Animals</h1>
-    <div class="columns picture-gap">
-      <div class="column">
-        <%= image_tag url_for(@animal_pictures[0].personal_pic.url),width: "89%"%>
-      </div>
-      <div class="column">
-        <%= image_tag url_for(@animal_pictures[2].personal_pic.url), width: "88%"%>
-        <p><%= image_tag url_for(@animal_pictures[1].personal_pic.url), width: "88%"%></p>
-      </div>
-    </div>
-
   </div>
+  See more...
+  <br>
+  <br>
+  <br>
 </center>
