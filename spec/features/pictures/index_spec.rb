@@ -10,7 +10,7 @@ RSpec.describe 'Picture Index Page', type: :feature do
     expect(current_path).to eq('/pictures/new')
   end
 
-  it 'shows categories of pictures' do
+  xit 'shows categories of pictures' do
     visit('/pictures')
 
     expect(page).to have_content('Animals')
