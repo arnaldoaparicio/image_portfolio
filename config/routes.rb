@@ -9,4 +9,5 @@ Rails.application.routes.draw do
 
   resources :pictures, only: [:index, :new, :create]
   get '/pictures/landscape_pictures', to: 'landscape_pictures#index'
+  get '/pictures/animal_pictures', to: 'animal_pictures#index'
 end
