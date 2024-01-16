@@ -45,6 +45,11 @@
     padding: 8px 114px;
     opacity: 0.7;
   }
+
+  .image-resize {
+    height: 440px;
+    width: auto;
+  }
 </style>
 <br>
 <center>
@@ -53,13 +58,13 @@
     <div class="columns picture-gap">
       <div class="column">
         <div class="cont">
-          <img width="88%" src=<%= url_for(@animal_pictures[2].personal_pic.url) %>>
+          <img width="88%" src=<%= url_for(@animal_pictures[2].personal_pic.url) %> class="image">
           <div class="middle">
             <div class="text"><%= @animal_pictures[2].title %></div>
           </div>
         </div>
         <div class="cont">
-          <p><img width="88%" src=<%= url_for(@animal_pictures[1].personal_pic.url) %>></p>
+          <p><img width="88%" src=<%= url_for(@animal_pictures[1].personal_pic.url) %> class="image"></p>
           <div class="middle">
             <div class="text"><%= @animal_pictures[1].title %></div>
           </div>
@@ -67,14 +72,14 @@
       </div>
       <div class="column">
         <div class="cont">
-          <img width="89%" src=<%= url_for(@animal_pictures[0].personal_pic.url) %>>
+          <img width="89%" src=<%= url_for(@animal_pictures[0].personal_pic.url) %> class="image">
           <div class="middle">
             <div class="text"><%= @animal_pictures[0].title %></div>
           </div>
         </div>
+        <p align="right"><a href=<%= pictures_animal_pictures_path %>>See more...</a></p>
       </div>
     </div>
-    See More...
 <br>
 <br>
 <br>
@@ -82,7 +87,7 @@
     <div class="columns picture-gap">
       <div class="column">
         <div class="cont">
-          <img src=<%= url_for(@landscape_pictures[2].personal_pic.url) %> class="image">
+          <img width="125%" src=<%= url_for(@landscape_pictures[2].personal_pic.url) %> class="image image-resize">
           <div class="middle">
             <div class="text"><%= @landscape_pictures[2].title %></div>
           </div>
@@ -90,21 +95,21 @@
       </div>
       <div class="column">
         <div class="cont">
-          <img width="88%" src=<%= url_for(@landscape_pictures[0].personal_pic.url)%> >
+          <img width="88%" src=<%= url_for(@landscape_pictures[0].personal_pic.url)%> class="image">
           <div class="middle">
             <div class="text"><%= @landscape_pictures[0].title %></div>
           </div>
         </div>
         <div class="cont">
-          <p><img width="88%" src=<%= url_for(@landscape_pictures[1].personal_pic.url) %>></p>
+          <p><img width="88%" src=<%= url_for(@landscape_pictures[1].personal_pic.url) %> class="image"></p>
           <div class="middle">
             <div class="text"><%= @landscape_pictures[1].title %></div>
           </div>
         </div>
+        <p align="right"><a href=<%= pictures_landscape_pictures_path %>>See more...</a></p>
       </div>
     </div>
   </div>
-  See more...
   <br>
   <br>
   <br>
