@@ -1,0 +1,3 @@
+class LandscapePicturesController < ApplicationController
+
+end
