@@ -21,5 +21,7 @@ RSpec.describe 'Animal Pictures Show Page' do
     expect(page).to have_content('Cancun, Mexico')
     expect(page).to have_content('2012')
     expect(page).to have_content('iPhone 7')
+
+    expect(picture.personal_pic.valid?).to eq(true)
   end
 end
