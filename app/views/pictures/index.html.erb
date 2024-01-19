@@ -47,8 +47,18 @@
   }
 
   .image-resize {
-    height: 440px;
+    height: 448px;
     width: auto;
+  }
+
+  .charlie-resize {
+    height: 472px;
+    width: auto;
+  }
+
+  .vertical-gap {
+    display: grid;
+    gap: 10px;
   }
 </style>
 <br>
@@ -56,15 +66,15 @@
   <div class="container is-max-desktop">
     <h1>Animals</h1>
     <div class="columns picture-gap">
-      <div class="column">
+      <div class="column vertical-gap">
         <div class="cont">
-          <img width="88%" src=<%= url_for(@animal_pictures[2].personal_pic.url) %> class="image">
+          <img src=<%= url_for(@animal_pictures[2].personal_pic.url) %> class="image">
           <div class="middle">
             <div class="text"><%= @animal_pictures[2].title %></div>
           </div>
         </div>
         <div class="cont">
-          <p><img width="88%" src=<%= url_for(@animal_pictures[1].personal_pic.url) %> class="image"></p>
+          <p><img src=<%= url_for(@animal_pictures[1].personal_pic.url) %> class="image"></p>
           <div class="middle">
             <div class="text"><%= @animal_pictures[1].title %></div>
           </div>
@@ -72,7 +82,7 @@
       </div>
       <div class="column">
         <div class="cont">
-          <img width="89%" src=<%= url_for(@animal_pictures[0].personal_pic.url) %> class="image">
+          <img src=<%= url_for(@animal_pictures[0].personal_pic.url) %> class="image charlie-resize">
           <div class="middle">
             <div class="text"><%= @animal_pictures[0].title %></div>
           </div>
@@ -87,13 +97,13 @@
     <div class="columns picture-gap">
       <div class="column">
         <div class="cont">
-          <img width="125%" src=<%= url_for(@landscape_pictures[2].personal_pic.url) %> class="image image-resize">
+          <img src=<%= url_for(@landscape_pictures[2].personal_pic.url) %> class="image image-resize">
           <div class="middle">
             <div class="text"><%= @landscape_pictures[2].title %></div>
           </div>
         </div>
       </div>
-      <div class="column">
+      <div class="column vertical-gap">
         <div class="cont">
           <img width="88%" src=<%= url_for(@landscape_pictures[0].personal_pic.url)%> class="image">
           <div class="middle">
@@ -110,7 +120,7 @@
       </div>
     </div>
   </div>
-    <%= link_to 'Submit New Picture', '/pictures/new' %>
+  <%= link_to 'Submit New Picture', '/pictures/new' %>
   <br>
   <br>
   <br>
