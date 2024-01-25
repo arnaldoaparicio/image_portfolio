@@ -53,12 +53,11 @@
   }
 </style>
 
-
 <br>
 <center>
   <% @landscape_pictures.each do |picture| %>
-  <div class="container is-max-desktop">
-    <div class="box" style="width: 66%">
+    <div class="container is-max-desktop">
+     <div class="box" style="width: 66%">
       <div class="cont">
         <%= image_tag url_for(picture.personal_pic.url), class: "image" %>
         <div class="middle">
@@ -68,12 +67,10 @@
             <p class="is-size-6">Shot on: <%= picture.device %></p>
             <br>
           </div>
-            <p class="text-paragraph is-size-6"><%= picture.description %></p>
+          <p class="text-paragraph is-size-6"><%= picture.description %></p>
         </div>
       </div>
     </div>
-    </div>
-    
   <% end %>
   <%= link_to 'Submit New Picture', '/pictures/new' %>
 </center>
