@@ -1,5 +1,6 @@
 <style>
   .cont {
+    background-color: #000000;
     position: relative;
     width: 100%;
   }
@@ -33,13 +34,13 @@
   }
 
   .text {
-    background-color: #000000;
     color: white;
     font-size: 14px;
-    padding: 8px 114px;
     opacity: 0.7;
   }
 </style>
+
+
 <br>
 <center>
   <% @landscape_pictures.each do |picture| %>
@@ -47,10 +48,17 @@
       <div class="cont">
         <%= image_tag url_for(picture.personal_pic.url), class: "image" %>
         <div class="middle">
-          <div class="text"><%= picture.title %></div>
+          <div class="text">
+            <p><%= picture.title %></p>
+            <p><%= picture.device %></p>
+            <p><%= picture.location %></p>
+            <p><%= picture.year %></p>
+            <p><%= picture.description %></p>
+          </div>
         </div>
       </div>
     </div>
+    
   <% end %>
   <%= link_to 'Submit New Picture', '/pictures/new' %>
 </center>
