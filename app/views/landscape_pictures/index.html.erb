@@ -15,6 +15,7 @@
   }
 
   .middle {
+    display: block;
     transition: .5s ease;
     opacity: 0;
     position: absolute;
@@ -22,7 +23,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    text-align: center
+    text-align: center;
+    
   }
 
   .cont:hover .image {
@@ -35,8 +37,19 @@
 
   .text {
     color: white;
-    font-size: 14px;
+    font-size: 24px;
     opacity: 0.7;
+    line-height: 1.1;
+    letter-spacing: 4px;
+    white-space: nowrap;
+  }
+
+  .text-paragraph {
+    color: white;
+    font-size: 24px;
+    opacity: 0.7;
+    line-height: 1;
+    letter-spacing: 3px;
   }
 </style>
 
@@ -44,19 +57,21 @@
 <br>
 <center>
   <% @landscape_pictures.each do |picture| %>
-    <div class="box" style="width: 50%">
+  <div class="container is-max-desktop">
+    <div class="box" style="width: 66%">
       <div class="cont">
         <%= image_tag url_for(picture.personal_pic.url), class: "image" %>
         <div class="middle">
           <div class="text">
-            <p><%= picture.title %></p>
-            <p><%= picture.device %></p>
-            <p><%= picture.location %></p>
-            <p><%= picture.year %></p>
-            <p><%= picture.description %></p>
+            <p class="is-size-3"><%= picture.title %></p>
+            <p class="is-size-6"><%= picture.location %> - <%= picture.year %></p>
+            <p class="is-size-6">Shot on: <%= picture.device %></p>
+            <br>
           </div>
+            <p class="text-paragraph is-size-6"><%= picture.description %></p>
         </div>
       </div>
+    </div>
     </div>
     
   <% end %>
