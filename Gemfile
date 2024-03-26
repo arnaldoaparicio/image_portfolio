@@ -54,6 +54,7 @@ gem "bootsnap", require: false
 gem 'figaro'
 gem 'aws-sdk-s3', require: false
 gem "nokogiri", ">= 1.16.2"
+gem "rdoc", ">= 6.6.3.1"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
